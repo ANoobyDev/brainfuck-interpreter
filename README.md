@@ -30,15 +30,15 @@ That's something easy to answer since I was the one to write it's source code.
 The file should end in .b / .bf (mainly for organisation), and the file structure should be as follows:
 
 ```
-1   CELLS:[number of cells(defaults to 10)] ASCII:[y/n(defaults to n)]
+1   CELLS:[number of cells(defaults to 10)]/ASCII:[y/n(defaults to n)]
 2   // Brainfuck code
 ```
 
-Easy, right? As a side note, you should keep this structure as similar as possible. You can not add the CELLS and ASCII specificators, but if you do, you must keep it as shown before.
+Easy, right? As a side note, you should keep this structure as similar as possible. You could not add the CELLS and ASCII specificators, but if you do, you must keep it as shown before.
 
 # WHY?
 
-Why i did it? I was bored. Why does this language exists in the first place? I guess someone felt the same way ~15 years before me.
+Why i did it? Because I was bored. Why does this language exists in the first place? I guess someone felt the same way ~15 years before me.
 
 # AUTHOR NOTE
 
