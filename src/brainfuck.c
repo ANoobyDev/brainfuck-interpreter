@@ -14,13 +14,13 @@
  */
 
 int main(int argc, char *argv[]){
-	if (argc != 3){
-		printf("Usage: %s [nº of cells] [brainfuck code]\n", argv[0]);
+	if (argc != 2){
+		printf("Usage: %s [brainfuck file]\n", argv[0]);
 		return 1;
 	}
 	int pos=0, progress=0;
 	char script[strlen(argv[2])]; strcpy(script, argv[2]);
-	char cells[atoi(argv[1])], error[200] = "Don't know what you did, but hope you are happy.\n";
+	char cells[atoi()], error[200] = "Don't know what you did, but hope you are happy.\n";
 	printf("Script: %s\n\n", script);
 	do{
 		
@@ -42,10 +42,10 @@ int main(int argc, char *argv[]){
 
 		// Read the character and perform an action based on it
 		if (script[progress]==*"+"){
-			cells[pos]=itoa(atoi(cells[pos])+1);
+			cells[pos]=sprintf(atoi(cells[pos])+1);
 		}
 		if (script[progress]==*"-"){
-			cells[pos]=itoa(atoi(cells[pos])-1);
+			cells[pos]=sprintf(atoi(cells[pos])-1);
 		}
 		if (script[progress]==*">"){
 			pos++;
