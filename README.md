@@ -27,7 +27,7 @@ Every character other than those is ignored.
 # HOW DOES THIS INTERPRETER WORK?
 
 That's something easy to answer since I was the one to write it's source code.
-The file should end in .b / .bf (mainly for organisation), and the file structure should be as follows:
+You should enter a file as an argument, and it should end in .b / .bf (mainly for organisation), and the file structure should be as follows:
 
 ```
 1   CELLS:[number of cells(defaults to 10)]/ASCII:[y/n(defaults to n)]
