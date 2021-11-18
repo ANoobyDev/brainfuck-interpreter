@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 /*
@@ -42,10 +41,10 @@ int main(int argc, char *argv[]){
 
 		// Read the character and perform an action based on it
 		if (script[progress]==*"+"){
-			cells[pos]=sprintf(atoi(cells[pos])+1);
+			sprintf(cells[pos], atoi(cells[pos])+1);
 		}
 		if (script[progress]==*"-"){
-			cells[pos]=sprintf(atoi(cells[pos])-1);
+			sprintf(cells[pos], atoi(cells[pos])-1);
 		}
 		if (script[progress]==*">"){
 			pos++;
