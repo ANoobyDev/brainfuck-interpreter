@@ -1,5 +1,5 @@
 COMPILER=gcc
-CONF=-o brainfuck
+CONF=-o brainfuck.out
 COMPILE=$(COMPILER) $(CONF)
 
 compile:
