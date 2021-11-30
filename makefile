@@ -6,4 +6,4 @@ compile:
 	$(COMPILE) src/brainfuck.c
 
 test: compile
-	./brainfuck src/thanks.bf
+	./brainfuck.out src/thanks.bf
