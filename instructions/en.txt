@@ -1,0 +1,19 @@
+HOW TO BRAINFUCK 101?
+
+Brainfuck is an esoteric language, that is turing-complete and works with cells. It has 8 instructions, and those are:              
+
+ +  --> Modifies the cell value it is on by 1.
+
+ -  --> Modifies the cell value it is on by -1.
+
+ >  --> changes the cell it acts on by 1.
+
+ <  --> Changes the cell it acts on by -1.
+
+ ,  --> Allows for data input.
+
+ .  --> Echoes the value of the cell it ends on.
+
+ [  --> Starts a loop.
+ 
+ ]  --> Goes to the las open loop it the cell it ends on does not have the value 0 / null.

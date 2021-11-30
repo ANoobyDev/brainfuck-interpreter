@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "../headers/brainfutils.h"
 
 /*
  * How does brainfuck work?
@@ -40,21 +41,7 @@ int main(int argc, char *argv[]){
 		}
 
 		// Read the character and perform an action based on it
-		if (script[progress]==*"+"){
-			sprintf(cells[pos], atoi(cells[pos])+1);
-		}
-		if (script[progress]==*"-"){
-			sprintf(cells[pos], atoi(cells[pos])-1);
-		}
-		if (script[progress]==*">"){
-			pos++;
-		}
-		if (script[progress]==*"<"){
-			pos--;
-		}
-		if (script[progress]==*"."){
-			printf("%s", cells[pos]);
-		}
+		#include "../headers/brainfutils.h"
 		progress++;
 	}while(1);
 	printf("Error: %s", error); 

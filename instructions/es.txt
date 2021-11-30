@@ -1,0 +1,19 @@
+COMO PROGRAMAR EN BRAINFUCK 101?
+
+Brainfuck es un lenguaje esoterico, el cual es turing completo y funciona con celdas. Tiene 8 instrucciones, las cuales son:
+
+ +  --> Modifica el valor de la celda en la que está por 1.
+
+ -  --> Modifica el valor de la celda en la que está por -1.
+
+ >  --> Cambia la celda en la que actua por 1. 
+
+ <  --> Cambia la celda en la que actua por -1. 
+
+ ,  --> Permite la introducción de datos.
+
+ .  --> Expulsa el valor de la celda en la que está.
+
+ [  --> Comienza un bucle.
+ 
+ ]  --> Vuelve al último bucle abierto si en la celda en la que acaba no tiene el valor 0 / null.
