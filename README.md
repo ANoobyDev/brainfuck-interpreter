@@ -44,4 +44,4 @@ Why i did it? Because I was bored. Why does this language exists in the first pl
 
 # AUTHOR NOTE
 
-Hope you enjoy playing with this, it's possible to do some impressive stuff. Remember that is under the GPLv3, that means that if you improve my shitty design, remember to push the changes to the repo.
+Hope you enjoy playing with this, it's possible to do some impressive stuff. Remember that is under the GPLv3, that means that if you improve the design and don't push it to the repo, you owe me your first born child.
