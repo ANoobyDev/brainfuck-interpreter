@@ -4,22 +4,24 @@ Brainfuck is an esoteric language, or joke language, that is turing-complete and
 
 # HOW DO I BRAINFUCK?
 
-Even though brainfuck is somewhat hard, it has only 7 instructions, and those are:
+Even though brainfuck is somewhat hard, it has only 8 instructions, and those are:
 
 ```
  +  --> Adds 1 to the cell it's in.
 
  -  --> Removes 1 to the cell it's in.
 
- >  --> Changes the cell position by 1.
+ >  --> Changes the cell it's in by 1.
 
- <  --> Changes the cell position by -1.
+ <  --> Changes the cell it's in by -1.
 
  ,  --> Allows for input.
 
  .  --> Echoes the value of the cell.
 
- [] --> Loops the instructions inside them as long as in the cell it ends on isn't 0.
+ [  --> Starts a loop.
+
+ ]  --> Goes to the last open bracket if it doesn't end on 0 / null.
 ```
 
 Every character other than those is ignored.
