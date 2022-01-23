@@ -1,9 +1,9 @@
-COMPILER=gcc
-CONF=-o brainfuck.out
+COMPILER=cc
+CONF=-o brainfuck
 COMPILE=$(COMPILER) $(CONF)
 
 compile:
-	$(COMPILE) src/brainfuck.c
+	$(COMPILE) main.c
 
 test: compile
-	./brainfuck.out src/thanks.bf
+	./brainfuck src/thanks.bf

@@ -4,7 +4,7 @@ Brainfuck is an esoteric language, or joke language, that is turing-complete and
 
 # HOW DO I BRAINFUCK?
 
-Even though brainfuck is somewhat hard, it has only 8 instructions, and those are:
+This version of brainfuck has only 10 instructions, and those are:
 
 ```
  +  --> Adds 1 to the cell it's in.
@@ -15,28 +15,20 @@ Even though brainfuck is somewhat hard, it has only 8 instructions, and those ar
 
  <  --> Changes the cell it's in by -1.
 
- ,  --> Allows for input.
+ ,  --> Allows for input(ONLY WITH NUMBERS FFS).
 
- .  --> Echoes the value of the cell.
+ ;  --> Gets ascii inputs.
+
+ .  --> Echoes the value of the cell(IF DONE WITH ASCII VALUES, WILL THROW IT'S VALUE ON THE ASCII TABLE).
+
+ :  --> Echoes the ascii value of the cell.
 
  [  --> Starts a loop.
 
  ]  --> Goes to the last open bracket if it doesn't end on 0 / null.
 ```
 
-Every character other than those is ignored.
-
-# HOW DOES THIS INTERPRETER WORK?
-
-That's something easy to answer since I was the one to write it's source code.
-You should enter a file as an argument, and it should end in .b / .bf (mainly for organisation), and the file structure should be as follows:
-
-```
-1   CELLS:[number of cells(defaults to 10)]/ASCII:[y/n(defaults to n)]
-2   // Brainfuck code
-```
-
-Easy, right? As a side note, you should keep this structure as similar as possible. You could not add the CELLS and ASCII specificators, but if you do, you must keep it as shown before.
+Every character other than those is(hopefully) ignored.
 
 # WHY?
 
