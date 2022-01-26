@@ -15,13 +15,9 @@ This version of brainfuck has only 10 instructions, and those are:
 
  <  --> Changes the cell it's in by -1.
 
- ,  --> Allows for input(ONLY WITH NUMBERS FFS).
+ ,  --> Allows for ascii input.
 
- ;  --> Gets ascii inputs.
-
- .  --> Echoes the value of the cell(IF DONE WITH ASCII VALUES, WILL THROW IT'S VALUE ON THE ASCII TABLE).
-
- :  --> Echoes the ascii value of the cell.
+ .  --> Echoes the ascii value of the cell.
 
  [  --> Starts a loop.
 
