@@ -1,8 +1,9 @@
 COMPILER=cc
-CONF=-o brainfuck
+CONF=-Os
+NAME=-o brainfuck
 
 compile:
-	$(COMPILER) $(CONF) main.c
+	$(COMPILER) $(CONF) $(NAME) main.c
 
 test: compile
 	./brainfuck src/thanks.bf
