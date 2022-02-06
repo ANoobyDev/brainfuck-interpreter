@@ -6,7 +6,7 @@ experience.
 
 # HOW DO I BRAINFUCK?
 
-This version of brainfuck has only 10 instructions, and those are:
+This version of brainfuck has only 8 instructions, and those are:
 
 ```
  +  --> Adds 1 to the cell it's in.
