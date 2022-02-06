@@ -13,7 +13,7 @@ if argc < 2 or argc > 3:
     print(f"\n\nUsage: {argv[0]} [path/to/file.bf] [args]\n")
     exit(1)
 
-
+# Devuelve una estimacion del inicio del bucle
 def loop(src, pos):
     endLoop = 0
     while 1:
@@ -28,8 +28,8 @@ def loop(src, pos):
     return pos
 
 # Busca errores, como bucles incompletos.
-def checkErrors(source):
-    lpStat = clStat = err = 0
+def checkErrors(source, argv):
+    lpStat = clStat = getInp = err = 0
     for i in source:
         if i == "[":
             lpStat += 1
@@ -39,33 +39,26 @@ def checkErrors(source):
             clStat += 1
         elif i == "<":
             clStat -= 1
+        elif i == ",":
+            getInp += 1
+
     if lpStat != 0:
         err += 1
-        print("\n\t 001: UNFINISHED LOOP \n")
+
     if clStat < 0:
         err += 2
-        print("\n\t 002: NEGATIVE CELL POSITION \n")
+        
+    if len(argv) < 3 and getInp != 0:
+        err += 4
+    try:
+        if len(argv[2]) < getInp:
+            err += 4
+    except:
+        pass
     
     if err != 0:
-        print(f"\nCode returned error {err}.")
+        print(f"\nCode returned {err}.")
         exit(err)
-
-# Version en C de checkErrors():
-# 
-# void checkErrors(char source[]){
-#   int lpStatus, err;
-#   for(int i; i=<strlen(source); i++){
-#       if(source[i] == '['){
-#           lpStatus++;
-#       }else if(source[i] == ']'){
-#           lpStatus--;
-#       }
-#   }
-#   if(lpStatus != 0){
-#       err+=1;
-#       fputs("\n\t 001: UNFINISHED LOOP \n\n", stderr);
-#   }
-# }
 
 
 # Calcula el numero necesario de celdas 
@@ -83,24 +76,6 @@ def getCells(source):
     return cells + 2
 
 
-# Version en C de 'getCells()':
-# 
-# int getCells(char source[]){
-#   int num, cells;
-#   for(int i; i=<strlen(source); i++){
-#       if(source[i] == '>'){
-#           num++;
-#       }else if(source[i] == '<'){
-#           num--;
-#       }
-#       if(num > cells){
-#           cells = num;
-#       }
-#   }
-#   return cells + 5;
-# }
-
-
 # Obtiene el input y se lo mete a 'stdin'
 if len(argv) == 3:
     stdin = argv[2]
@@ -112,7 +87,7 @@ with open(argv[1], "r") as file:
     print(f"\nCodigo fuente:\n{source}\n\n")
 
 # Comprueba que no hayan errores es el codigo.
-checkErrors(source)
+checkErrors(source, argv)
 
 # Variables del interpretador.
 prgPos = cellPos = pArg = 0
@@ -130,6 +105,8 @@ while prgPos != len(source):
     # para mayor facilidad de acceso.
     obj = source[prgPos]
 
+    # TODO: Un def para seguir de forma estricta las reglas de brainfuck
+    
     # Comportamiento segun el valor de la instruccion.
     if obj == ">":
         cellPos += 1
@@ -156,3 +133,6 @@ while prgPos != len(source):
 
     # Pasa a la siguiente instruccion.
     prgPos += 1 
+
+print("\n\nCode returned 0")
+exit(0)
