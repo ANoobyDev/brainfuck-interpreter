@@ -1,8 +1,8 @@
 # WHAT IS BRAINFUCK?
 
-Brainfuck is an esoteric language, or joke language, that is turing-complete and it works with cells. 
+Brainfuck is an esoteric language that is turing-complete and works with cells. 
 Even though it isn't very useful, it's an interesting experience every passionate programmer should 
-experience. The name comes because coding on it does feel you that.
+experience.
 
 # HOW DO I BRAINFUCK?
 
