@@ -47,7 +47,7 @@ def checkErrors(source, argv):
 
     if clStat < 0:
         err += 2
-        
+
     if len(argv) < 3 and getInp != 0:
         err += 4
     try:
@@ -59,7 +59,6 @@ def checkErrors(source, argv):
     if err != 0:
         print(f"\nCode returned {err}.")
         exit(err)
-
 
 # Calcula el numero necesario de celdas 
 # para que el programa funcione correctamente 
@@ -73,7 +72,7 @@ def getCells(source):
             num -= 1
         if num > cells:
             cells = num
-    return cells + 2
+    return cells
 
 
 # Obtiene el input y se lo mete a 'stdin'
@@ -95,9 +94,8 @@ prgPos = cellPos = pArg = 0
 # Le agrega el numero necesario de celdas necesarias + 2, 
 # para situaciones inesperadas
 cells = []
-for i in range(getCells(source)):
+for i in range(getCells(source) + 2):
     cells.append(0)
-
 
 # Interpretador.
 while prgPos != len(source):
