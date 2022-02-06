@@ -53,7 +53,9 @@ If it doesn't work, depending on the exit it can be the following:
 
 # TODO
 [x] Make it to interpret brainfuck(only in the python version atm).
+
 [ ] Make it to COMPILE brainfuck.
+
 [ ] Add more stuff to the TODO.
 
 # AUTHOR NOTE
