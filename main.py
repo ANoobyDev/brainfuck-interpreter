@@ -6,10 +6,9 @@ a C.
 
 # Libreria necesaria para los argumentos.
 from sys import *
-argc = len(argv)
 
 # Comprueba que los argumentos sean correctos
-if argc < 2 or argc > 3:
+if len(argv) < 2 or len(argv) > 3:
     print(f"\n\nUsage: {argv[0]} [path/to/file.bf] [args]\n")
     exit(1)
 
