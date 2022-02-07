@@ -27,12 +27,9 @@ int main(int argc, char *argv[]){
 
     // Get the source code from the file provided and print it
     char source[LENGTH]="";
-    fgets(source, LENGTH, fopen(argv[1], "r"));
-    printf("Source code: %s\n", source);
+    FILE *file = fopen(argv[1], "r");
+    printf("Source code: %s\n", fgets(source, LENGTH, file));
 
-    // Interpreter
-    int cells[LENGTH], pos, loops[];
-    for (int i=0; i=)
 
     return 0;
 }
