@@ -4,7 +4,7 @@ Brainfuck is a turing-complete, esoteric language that uses only 8 commands.
 
 # HOW DO I BRAINFUCK?
 
-mempo = memory pointer
+> mempo = memory pointer
 
 The instructions for writting in brainfuck are the following:
 
