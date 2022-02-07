@@ -8,7 +8,7 @@ mempo = memory pointer
 
 The instructions for writting in brainfuck are the following:
 
-'''
+```
 + --> Adds 1 to the value on the mempo is in.
 
 - --> Removes 1 to the value on the mempo is in.
@@ -24,14 +24,14 @@ The instructions for writting in brainfuck are the following:
 [ --> Starts a loop.
 
 ] --> Ends a loop if the value of the mempo it's in equals to 0, otherwise it restarts.
-'''
+```
 
 Every character other than those is (hopefully) ignored.
 
 # ERRORS
 If it doesn't work, depending on the return it can be the following:
 
-'''
+```
 0   - No problems on the code, check it's well written or mail me.
 
 1   - There is an unfinished loop, somewhere.
@@ -47,4 +47,4 @@ If it doesn't work, depending on the return it can be the following:
 6   - 2 & 4
 
 7   - 1 & 2 & 4
-'''
+```
