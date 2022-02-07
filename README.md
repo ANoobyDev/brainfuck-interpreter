@@ -1,63 +1,50 @@
 # WHAT IS BRAINFUCK?
 
-Brainfuck is an esoteric language that is turing-complete and works with cells. 
-Even though it isn't very useful, it's an interesting experience every passionate programmer should 
-experience.
+Brainfuck is a turing-complete, esoteric language that uses only 8 commands.
 
 # HOW DO I BRAINFUCK?
 
-This version of brainfuck has only 8 instructions, and those are:
+mempo = memory pointer
 
-```
- +  --> Adds 1 to the cell it's in.
+The instructions for writting in brainfuck are the following:
 
- -  --> Removes 1 to the cell it's in.
+'''
++ --> Adds 1 to the value on the mempo is in.
 
- >  --> Changes the cell it's in by 1.
+- --> Removes 1 to the value on the mempo is in.
 
- <  --> Changes the cell it's in by -1.
+> --> Changes the mempo by 1.
 
- ,  --> Allows for ascii input.
+< --> Changes the mempo by -1.
 
- .  --> Echoes the ascii value of the cell.
+. --> Outputs ASCII(char) value.
 
- [  --> Starts a loop.
+, --> Inputs ASCII(char) value.
 
- ]  --> Goes to the last open bracket if it doesn't end on 0 / null.
-```
+[ --> Starts a loop.
+
+] --> Ends a loop if the value of the mempo it's in equals to 0, otherwise it restarts.
+'''
 
 Every character other than those is (hopefully) ignored.
 
-# WHY?
-
-Why i did it? Because I was bored. Why does this language exists in the first place? I guess someone felt the same way ~15 years before me.
-
 # ERRORS
-If it doesn't work, depending on the exit it can be the following:
+If it doesn't work, depending on the return it can be the following:
 
-0  -  No problems on the code, have you checked that it's well written?
+'''
+0   - No problems on the code, check it's well written or mail me.
 
-1  -  There is an unfinished loop.
+1   - There is an unfinished loop, somewhere.
 
-2  -  You are trying to access a negative cell position.
+2   - You ar etrying to access a negative mempo.
 
-3  -  1 & 2.
+3   - 1 & 2
 
-4  -  Not enough input or not input at all.
+4   - Not enough input.
 
-5  -  1 & 4
+5   - 1 & 4
 
-6  -  2 & 4
+6   - 2 & 4
 
-7  -  1 & 2 & 4
-
-# TODO
-[x] Make it to interpret brainfuck(only in the python version atm).
-
-[ ] Make it to COMPILE brainfuck.
-
-[ ] Add more stuff to the TODO.
-
-# AUTHOR NOTE
-
-Hope you enjoy playing with this, it's possible to do some impressive stuff.
+7   - 1 & 2 & 4
+'''
