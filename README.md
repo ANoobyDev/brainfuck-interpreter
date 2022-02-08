@@ -32,7 +32,7 @@ Every character other than those is (hopefully) ignored.
 If it doesn't work, depending on the return it can be the following:
 
 ```
-0   - No problems on the code, check it's well written or mail me.
+0   - No problems on the code, check it's well written.
 
 1   - There is an unfinished loop, somewhere.
 
