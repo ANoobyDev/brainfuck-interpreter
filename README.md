@@ -36,7 +36,7 @@ If it doesn't work, depending on the return it can be the following:
 
 1   - There is an unfinished loop, somewhere.
 
-2   - You ar etrying to access a negative mempo.
+2   - You are trying to access a negative mempo.
 
 3   - 1 & 2
 
