@@ -7,6 +7,10 @@ a C.
 # Libreria necesaria para los argumentos.
 from sys import *
 
+
+# Longitud maxima de las celdas
+LEN = 80000
+
 # Comprueba que los argumentos sean correctos
 if len(argv) < 2 or len(argv) > 3:
     print(f"\n\nUsage: {argv[0]} [path/to/file.bf] [args]\n")
@@ -59,21 +63,6 @@ def checkErrors(source, argv):
         print(f"\nCode returned {err}.")
         exit(err)
 
-# Calcula el numero necesario de celdas 
-# para que el programa funcione correctamente 
-# usando el minimo numero de recursos.
-def getCells(source):
-    num = cells = 0
-    for i in source:
-        if i == ">":
-            num += 1
-        elif i == "<":
-            num -= 1
-        if num > cells:
-            cells = num
-    return cells
-
-
 # Obtiene el input y se lo mete a 'stdin'
 if len(argv) == 3:
     stdin = argv[2]
@@ -93,7 +82,7 @@ prgPos = cellPos = pArg = 0
 # Le agrega el numero necesario de celdas necesarias + 2, 
 # para situaciones inesperadas
 cells = []
-for i in range(getCells(source) + 2):
+for i in range(LEN):
     cells.append(0)
 
 # Interpretador.
